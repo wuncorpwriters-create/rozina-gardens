@@ -1,0 +1,328 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+    color: #222;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background: url("../images/exterior/building-front-pink.jpg") center/cover no-repeat;
+    color: white;
+    padding: 110px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #1b5e20;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+.site-logo {
+    margin-right: 50px;
+}
+
+.site-logo img {
+    height: 120px;
+    width: auto;
+    display: block;
+}
+
+.book-btn {
+    background: #25D366;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 30px;
+    margin-left: auto;
+    transition: 0.25s ease;
+}
+
+.book-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+/* Book Now Button */
+
+.book-btn {
+    background: #25D366;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 30px;
+    margin-left: 25px;
+    transition: 0.25s ease;
+}
+
+.book-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+nav a:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   CTA BUTTONS
+========================= */
+.cta a {
+    display: inline-block;
+    background: white;
+    color: #2e7d32;
+    padding: 12px 18px;
+    margin: 6px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta a:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+.intro {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.intro h1,
+.intro h2 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+.intro p {
+    color: #555;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.cards,
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   CARD STYLING
+========================= */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cards a.card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+    margin: 12px 0 6px;
+    color: #1b5e20;
+    font-size: 18px;
+}
+
+.card p {
+    padding: 0 12px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.cards .card:hover h3 {
+    color: #2e7d32;
+}
+
+/* =========================
+   GALLERY IMAGES
+========================= */
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery br {
+    display: none;
+}
+
+/* =========================
+   BOOKING SECTION
+========================= */
+.booking-section {
+    background: white;
+    padding: 60px 20px;
+}
+
+.booking-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.booking-card {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.booking-card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #2e7d32;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.booking-card a:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #2e7d32;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================
+   WHATSAPP FLOATING BUTTON
+========================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .cards,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
