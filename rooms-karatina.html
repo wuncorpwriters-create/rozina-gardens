@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC22YTWTRE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EC22YTWTRE');
+    </script>
+    <script>
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('a[href]');
+        if (!link || typeof gtag !== 'function') return;
+        var href = link.getAttribute('href') || '';
+        var eventName = '';
+        if (href.indexOf('wa.me/') !== -1 || href.indexOf('api.whatsapp.com/') !== -1) eventName = 'whatsapp_click';
+        else if (href.indexOf('tel:') === 0) eventName = 'phone_click';
+        else if (href.indexOf('google.com/maps') !== -1 || href.indexOf('maps.google.com') !== -1) eventName = 'directions_click';
+        if (eventName) gtag('event', eventName, { page_path: window.location.pathname, link_url: link.href });
+      });
+    </script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms in Karatina | Accommodation at Rozina Gardens</title>
     <meta name="description" content="Looking for accommodation in Karatina? Explore clean, comfortable guest rooms at Rozina Gardens along Karima Karatina Road and check availability by WhatsApp or phone.">
