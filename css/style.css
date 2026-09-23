@@ -405,8 +405,17 @@ nav {
   box-shadow: 0 2px 0 rgba(255,255,255,.04);
 }
 nav a { color: #fffdf9; }
-.site-logo { margin-right: auto; }
-.site-logo img { height: 62px; }
+.site-logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+.site-logo img {
+  height: 78px;
+  width: auto;
+  display: block;
+}
 .book-btn {
   background: var(--rose);
   margin-left: 12px;
@@ -518,7 +527,7 @@ footer {
 @media (max-width: 900px) {
   nav { justify-content:center; gap:16px; padding:14px 18px; }
   .site-logo { width:100%; margin-right:0; display:flex; justify-content:center; }
-  .site-logo img { height:58px; }
+  .site-logo img { height:68px; }
   .book-btn { margin-left:0; }
   .service-hero { gap:28px; }
 }
