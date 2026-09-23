@@ -86,19 +86,6 @@ nav a:hover {
     display: block;
 }
 
-.book-btn {
-    background: #25D366;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 30px;
-    margin-left: auto;
-    transition: 0.25s ease;
-}
-
-.book-btn:hover {
-    background: #1ebe5d;
-    transform: translateY(-2px);
-}
 /* Book Now Button */
 
 .book-btn {
@@ -324,5 +311,34 @@ footer {
     .cards,
     .gallery {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* Keyboard accessibility */
+a:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 12px 16px;
+        justify-content: center;
+    }
+
+    .site-logo {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .site-logo img {
+        height: 90px;
+    }
+
+    .book-btn {
+        margin-left: 0;
     }
 }
