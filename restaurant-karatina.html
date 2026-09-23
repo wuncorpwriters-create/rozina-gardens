@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC22YTWTRE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EC22YTWTRE');
+    </script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant in Karatina | Dining at Rozina Gardens</title>
     <meta name="description" content="Enjoy restaurant dining, fresh meals and buffet service at Rozina Gardens in Karatina. Contact us for table reservations, group dining and buffet enquiries.">
@@ -53,5 +62,26 @@
 </section>
 <footer><p>© 2026 Rozina Gardens | Karatina, Kenya</p></footer>
 <a href="https://wa.me/254119353211?text=Hello%20I%20would%20like%20to%20make%20a%20restaurant%20reservation%20at%20Rozina%20Gardens" class="whatsapp-float" target="_blank" rel="noopener">💬 Book on WhatsApp</a>
+
+<script>
+(function () {
+  function track(eventName, params) {
+    if (typeof gtag === 'function') gtag('event', eventName, params || {});
+  }
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    if (/wa\.me|api\.whatsapp\.com/i.test(href)) {
+      track('whatsapp_click', { link_url: link.href, link_text: (link.textContent || '').trim() });
+    } else if (/^tel:/i.test(href)) {
+      track('phone_click', { link_url: href, link_text: (link.textContent || '').trim() });
+    } else if (/google\.(com|co\.[a-z]+)\/maps|maps\.app\.goo\.gl/i.test(href)) {
+      track('directions_click', { link_url: link.href, link_text: (link.textContent || '').trim() });
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
