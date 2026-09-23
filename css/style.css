@@ -371,3 +371,159 @@ a:focus-visible {
   .service-hero img { height:260px; }
   .feature-grid, .service-images { grid-template-columns:1fr; }
 }
+
+
+/* =========================
+   2026 HOSPITALITY VISUAL REFRESH
+   Forest green + warm ivory + Rozina rose
+========================= */
+:root {
+  --forest: #174f32;
+  --forest-dark: #103923;
+  --leaf: #2f7650;
+  --rose: #b54d72;
+  --rose-soft: #f4e5ea;
+  --ivory: #fbf7ef;
+  --sand: #f2eadf;
+  --paper: #fffdf9;
+  --charcoal: #292823;
+  --muted: #69645d;
+  --line: #e7ddd0;
+  --whatsapp: #25D366;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+nav {
+  background: var(--forest-dark);
+  padding: 14px max(28px, calc((100% - 1200px) / 2));
+  gap: 24px;
+  box-shadow: 0 2px 0 rgba(255,255,255,.04);
+}
+nav a { color: #fffdf9; }
+.site-logo { margin-right: auto; }
+.site-logo img { height: 62px; }
+.book-btn {
+  background: var(--rose);
+  margin-left: 12px;
+  box-shadow: 0 6px 18px rgba(181,77,114,.2);
+}
+.book-btn:hover { background: #9f3f62; }
+
+.hero {
+  min-height: 570px;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero::before {
+  background: linear-gradient(90deg, rgba(16,57,35,.90) 0%, rgba(16,57,35,.68) 48%, rgba(16,57,35,.32) 100%);
+}
+.hero h1 { max-width: 900px; margin-left:auto; margin-right:auto; font-size: clamp(36px, 5vw, 58px); line-height:1.08; }
+.hero p { max-width: 820px; margin-left:auto; margin-right:auto; line-height:1.65; }
+.hero .tagline { color:#f4e5ea; }
+
+.sticky-bar { background: var(--forest-dark); }
+.sticky-bar a { color: white; }
+
+.intro { padding: 64px 20px; }
+.intro h1, .intro h2,
+.service-section h2, .local-cta h2,
+.booking-section h2 { color: var(--forest); }
+.intro p, .service-section > p, .local-cta p { color: var(--muted); }
+
+.cards, .gallery { gap: 24px; }
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 26px rgba(54,45,34,.08);
+}
+.card:hover {
+  box-shadow: 0 16px 36px rgba(54,45,34,.13);
+}
+.card h3, .feature-grid h3 { color: var(--forest); }
+.card p, .feature-grid p { color: var(--muted); }
+
+.booking-section, .service-section.alt { background: var(--sand); }
+.booking-card, .feature-grid article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.booking-card a,
+.service-hero .cta a,
+.local-cta .cta a {
+  background: var(--forest);
+}
+.booking-card a:hover,
+.service-hero .cta a:hover,
+.local-cta .cta a:hover { background: var(--forest-dark); }
+
+.service-hero {
+  max-width: 1240px;
+  padding: 76px 28px;
+  gap: 54px;
+}
+.service-hero h1 {
+  color: var(--forest-dark);
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.08;
+}
+.service-hero p { color: var(--muted); font-size:17px; }
+.service-hero img {
+  height: 430px;
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(54,45,34,.16);
+}
+.eyebrow { color: var(--rose) !important; }
+.feature-grid article { box-shadow: 0 8px 24px rgba(54,45,34,.07); }
+.text-links a, .card h3 a, .card p a { color: var(--forest); }
+
+.local-cta {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+footer {
+  background: var(--forest-dark);
+  color: #fffdf9;
+}
+
+.whatsapp-float {
+  background: var(--whatsapp);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+/* restrained brand accent */
+.intro h1::after,
+.intro h2::after,
+.service-section h2::after,
+.local-cta h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 3px;
+  background: var(--rose);
+}
+.service-hero h1::after { display:none; }
+
+@media (max-width: 900px) {
+  nav { justify-content:center; gap:16px; padding:14px 18px; }
+  .site-logo { width:100%; margin-right:0; display:flex; justify-content:center; }
+  .site-logo img { height:58px; }
+  .book-btn { margin-left:0; }
+  .service-hero { gap:28px; }
+}
+@media (max-width: 768px) {
+  .hero { min-height:500px; padding:85px 20px; }
+  .service-hero { padding:48px 20px; }
+  .service-hero img { height:300px; }
+}
